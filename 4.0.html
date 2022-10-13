@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <div class="box1"></div>
+        <div class="box2">
+            <div class="innerbox"></div>
+        </div>
+    </div>
+
+    <div class="Box">
+        <div class="innerbox1"></div>
+    </div>
+</body>
+</html>
+
+<style>
+
+    .container{
+        background-color: orange;
+        height: 350px;
+        width: 300px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 75px;
+        left: 75px;
+    }
+
+    .box1{
+        background-color: darkgreen;
+        height: 200px;
+        width: 175px;
+    }
+
+    .box2{
+        background-color: lightblue;
+        height: 250px;
+        width: 175px;
+        position: relative;
+    }
+
+    .innerbox{
+        background-color: red;
+        width: 70px;
+        height: 20px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .Box{
+        background-color: blue;
+        height: 175px;
+        width: 175px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: row;
+
+    }
+
+</style>
+
+</head>
+
