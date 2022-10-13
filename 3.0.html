@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+
+  <style>
+    .item{
+
+        background-color: black;
+        Position: absolute;
+        width: 75px;
+        height: 75px;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .box{
+
+        background-color: lightblue;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        border: 5px solid black;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    .wrapper {
+        
+        height: 45vh;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+
+.container1{
+
+background-color: lightblue;
+position: relative;
+height: 50vh;
+width: 25vw;
+
+}
+.container2{
+
+position: relative;
+background-color: lightblue;
+height: 50vh;
+width: 25vw;
+
+}
+
+#Item1.Box1 {
+
+background-color: red;
+position: absolute;
+height: 80px;
+width: 80px;
+bottom: 0px;
+right:0;
+
+
+}
+#Item2.Box2{
+
+background-color: red;
+position:absolute;
+height: 80px;
+width: 80px;
+bottom: 0;
+left: 0;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container1">
+      <div class="Box1" id="Item1"></div>
+    </div>
+    <div class="container2">
+      <div class="Box2" id="Item2"></div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="item"></div>
+</div>
+</body>
+</html>
