@@ -6,7 +6,7 @@ div{
 
 /* ID Selektor */
 
-#header{
+#Header{
 
     font-size: 2rem;
 
@@ -20,5 +20,14 @@ div{
 .Subtitle{
 
     color:red;
+    font-size: large;
 }
+
+
+#Kinder p{
+
+    color:blue;
+    background-color: blueviolet;
+}
+
 
