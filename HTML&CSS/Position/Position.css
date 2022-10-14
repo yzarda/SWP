@@ -1,0 +1,34 @@
+div{
+
+    border-style: solid;
+    height: 100px;
+}
+
+.div1{
+
+background-color: red;
+position:relative;
+top:5px;
+left:15px;
+
+}
+
+.div2{
+
+background-color:rebeccapurple; 
+position: absolute;
+bottom: 0px;
+width: 100px;
+
+}
+
+.div3{
+
+background-color:darkgoldenrod;
+position:fixed;
+bottom:100px;
+width:100px;
+
+
+
+}
