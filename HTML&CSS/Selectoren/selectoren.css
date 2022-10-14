@@ -1,0 +1,24 @@
+/* ELEMENT Selektor*/
+
+div{
+    background-color: aquamarine;
+}
+
+/* ID Selektor */
+
+#header{
+
+    font-size: 2rem;
+
+}
+
+
+
+/*Klassenselector*/
+
+
+.Subtitle{
+
+    color:red;
+}
+
