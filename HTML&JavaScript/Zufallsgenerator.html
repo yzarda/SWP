@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zufallsgenerator</title>
+  </head>
+  <body>
+    <div>
+      <label for="lowerValue">Unterer Wert:</label>
+      <input type="number" id="lowerValue"/>
+    </div>
+    <div>
+      <label for="upperValue">Oberer Wert:</label>
+      <input type="number" id="upperValue"/>
+    </div>
+    <div>
+      <button onclick="generateRandomNumber()">Generieren</button>
+    </div>
+    <div>
+      <p id="result"></p>
+    </div>
+    <script>
+      function generateRandomNumber() {
+        var lowerValue = document.getElementById("lowerValue").value;
+        var upperValue = document.getElementById("upperValue").value;
+        var result = Math.floor(Math.random() * (upperValue - lowerValue + 1)) + lowerValue;
+        document.getElementById("result").innerHTML = "Ergebnis: " + result;
+      }
+    </script>
+  </body>
+</html>

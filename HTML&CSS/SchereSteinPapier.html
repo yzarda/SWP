@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schere-Stein-Papier</title>
+</head>
+<body>
+  <h1>Schere-Stein-Papier</h1>
+  <button id="scissors" onclick="play('scissors')">Schere</button>
+  <button id="rock" onclick="play('rock')">Stein</button>
+  <button id="paper" onclick="play('paper')">Papier</button>
+  <p id="result"></p>
+  <script>
+    function play(userChoice) {
+      // Generieren Sie eine zufällige Wahl für den Computer
+      var computerChoice = Math.random();
+      if (computerChoice < 0.34) {
+        computerChoice = "scissors";
+      } else if(computerChoice <= 0.67) {
+        computerChoice = "rock";
+      } else {
+        computerChoice = "paper";
+      }
+
+      // Vergleiche die Wahl des Benutzers mit der Wahl des Computers
+      if (userChoice === computerChoice) {
+        document.getElementById("result").innerHTML = "Unentschieden!";
+      } else if (userChoice === "scissors") {
+        if (computerChoice === "rock") {
+          document.getElementById("result").innerHTML = "Computer gewinnt mit Stein!";
+        } else {
+          document.getElementById("result").innerHTML = "Du gewinnst mit Schere!";
+        }
+      } else if (userChoice === "rock") {
+        if (computerChoice === "paper") {
+          document.getElementById("result").innerHTML = "Computer gewinnt mit Papier!";
+        } else {
+          document.getElementById("result").innerHTML = "Du gewinnst mit Stein!";
+        }
+      } else if (userChoice === "paper") {
+        if (computerChoice === "scissors") {
+          document.getElementById("result").innerHTML = "Computer gewinnt mit Schere!";
+        } else {
+          document.getElementById("result").innerHTML = "Du gewinnst mit Papier!";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

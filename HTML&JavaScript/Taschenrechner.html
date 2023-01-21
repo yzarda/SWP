@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taschenrechner</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="display" disabled/>
+    </div>
+    <div>
+      <button onclick="addNumber(1)">1</button>
+      <button onclick="addNumber(2)">2</button>
+      <button onclick="addNumber(3)">3</button>
+      <button onclick="addOperator('+')">+</button>
+    </div>
+    <div>
+      <button onclick="addNumber(4)">4</button>
+      <button onclick="addNumber(5)">5</button>
+      <button onclick="addNumber(6)">6</button>
+      <button onclick="addOperator('-')">-</button>
+    </div>
+    <div>
+      <button onclick="addNumber(7)">7</button>
+      <button onclick="addNumber(8)">8</button>
+      <button onclick="addNumber(9)">9</button>
+      <button onclick="addOperator('*')">*</button>
+    </div>
+    <div>
+      <button onclick="addNumber(0)">0</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="addOperator('/')">/</button>
+      <button onclick="clearDisplay()">C</button>
+    </div>
+    <script>
+      var display = document.getElementById("display");
+      var currentNumber = "";
+      var currentOperator = "";
+      var previousNumber = "";
+      var result = 0;
+      
+      function addNumber(number) {
+        currentNumber += number;
+        display.value = currentNumber;
+      }
+      
+      function addOperator(operator) {
+        if (currentNumber === "") {
+          return;
+        }
+        previousNumber = currentNumber;
+        currentNumber = "";
+        currentOperator = operator;
+      }
+      
+      function calculate() {
+        if (currentNumber === "" || previousNumber === "" || currentOperator === "") {
+          return;
+        }
+        previousNumber = parseFloat(previousNumber);
+        currentNumber = parseFloat(currentNumber);
+        switch (currentOperator) {
+          case "+":
+            result = previousNumber + currentNumber;
+            break;
+          case "-":
+            result = previousNumber - currentNumber;
+            break;
+          case "*":
+            result = previousNumber * currentNumber;
+            break;
+          case "/":
+            result = previousNumber / currentNumber;
+            break;
+        }
+        display.value = result;
+        currentNumber = "";
+        currentOperator = "";
+        previousNumber = "";
+      }
+      
+      function clearDisplay() {
+        currentNumber = "";
+        currentOperator = "";
+        previousNumber = "";
+        result = 0;
+        display.value = "";
+      }
+    </script>
+  </body>
+</html>

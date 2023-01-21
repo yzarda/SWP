@@ -1,0 +1,11 @@
+for (var i = 0; i < 4; i++) {
+  var row = "";
+  for (var j = 0; j < 4; j++) {
+    if ((i + j) % 2 === 0) {
+      row += "X ";
+    } else {
+      row += "O ";
+    }
+  }
+  console.log(row);
+}

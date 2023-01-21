@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <ul id="todo-list"></ul>
+    <form>
+      <input type="text" id="new-todo" placeholder="Add a new task">
+      <button type="submit" id="add-todo">Add</button>
+    </form>
+
+    <script>
+      // Get references to the form and list elements
+      const form = document.querySelector('form');
+      const todoList = document.querySelector('#todo-list');
+      // An empty array to store the to-do items
+      let todos = [];
+
+      // Function to add a new to-do item to the list
+      const addTodo = (text) => {
+        const todo = { text, done: false };
+        todos.push(todo);
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <input type="checkbox">
+          <span>${todo.text}</span>
+          <button>Delete</button>
+        `;
+        todoList.appendChild(listItem);
+      };
+
+      // Event listener for the form submit event
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const newTodo = document.querySelector('#new-todo');
+        if (newTodo.value) {
+          addTodo(newTodo.value);
+          newTodo.value = '';
+        }
+      });
+
+      //Event listener for the checkbox
+      todoList.addEventListener('change', (event) => {
+        if (event.target.type === 'checkbox') {
+          const index = [...todoList.children].indexOf(event.target.parentNode);
+          todos[index].done = event.target.checked;
+        }
+      });
+
+      // Event listener for the delete button
+      todoList.addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON') {
+          const index = [...todoList.children].indexOf(event.target.parentNode);
+          todos.splice(index, 1);
+          event.target.parentNode.remove();
+        }
+      });
+      
+      // Function to save the to-do list to local storage
+      const saveToLocalStorage = () => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+      };
+
+      // Function to load the to-do list from local storage
+      const loadFromLocalStorage = () => {
+        const savedTodos = JSON.parse(localStorage.getItem('todos'));
+        if (savedTodos) {
+          todos = savedTodos;
+          savedTodos.forEach((todo) => addTodo(todo.text));
+        }
+      };
+
+      // Call the load function when the page loads
+      loadFromLocalStorage();
+
+      // Call the save function when the page unloads
+      window.addEvent
+
