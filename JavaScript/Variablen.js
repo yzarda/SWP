@@ -35,6 +35,6 @@ console.log("Preis von 1000 Äpfel = " + resultAppleTon);
 console.log("Preis von 1000 Bananen = " + resultBananaTon);
 
 
-
+//TEST
 
 
