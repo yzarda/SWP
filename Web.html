@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <title>Die interesannten Boxen</title>
+    <style>
+        body {
+            margin: 20px; 
+        }
+
+        .hellblaue-box {
+            width: 400px;
+            height: 300px;
+            background-color: lightblue;
+            margin-bottom: 20px; 
+            position: relative;
+            padding: 10px; 
+        }
+
+        .lila-box {
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .braune-box {
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .gelbe-box {
+            width: calc(100% - 50px); 
+            height: 50px;
+            background-color: yellow;
+            margin-bottom: 20px; 
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gruene-box {
+            width: 25px; 
+            height: 25px; 
+            background-color: green;
+            margin: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hellblaue-box">
+        <div class="braune-box"></div>
+        Willkommen!<br>
+        *Eins<br>
+        *Zwei<br>
+        *Drei
+    </div>
+    <div class="lila-box"></div>
+    <div class="gelbe-box">
+        <div class="gruene-box"></div>
+        <div class="gruene-box"></div>
+        <div class="gruene-box"></div>
+        <div class="gruene-box"></div>
+    </div>
+</body>
+</html>
