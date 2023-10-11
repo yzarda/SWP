@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Website</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Fußball Website</title>
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-        <nav>
-            <ul>
-                <li><a href="#">Bundesliga Tabelle</a></li>
-                <li><a href="#">Torschützenkönig</a></li>
-                <li><a href="#">Spiele</a></li>
-                <li><a href="#">Information</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Mehr</a>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <h1>Arda's Fussball Website</h1>
     </header>
+    
+    <nav>
+        <a href="#" class="menu-link" onclick="changeContent('home')">Home</a>
+        <a href="#" class="menu-link" onclick="changeContent('bundesliga')">Bundesliga Tabelle</a>
+        <a href="#" class="menu-link" onclick="changeContent('torschuetzen')">Torschützenkönig</a>
+        <a href="#" class="menu-link" onclick="changeContent('spiele')">Spiele</a>
+        <a href="#" class="menu-link" onclick="changeContent('informationen')">Informationen</a>
+    </nav>
 
-    <main>
-        
-    </main>
+    <div class="content" id="content">
+        Hallo Hallo Hallo
+    </div>
+
+    <script>
+        function changeContent(page) {
+            const contentDiv = document.getElementById('content');
+
+            switch (page) {
+                case 'home':
+                    contentDiv.innerHTML = '<h2>Wilkommen</h2>';
+                    break;
+
+                case 'bundesliga':
+                    contentDiv.innerHTML = '<h2>Bundesliga Tabelle</h2><table border="1"><tr><td>Platz</td><td>Verein</td><td>Punkte</td></tr><tr><td>1</td><td>FC Bayern München</td><td>30</td></tr><tr><td>2</td><td>Borussia Dortmund</td><td>25</td></tr><tr><td>3</td><td>RB Leipzig</td><td>22</td></tr></table>';
+                    contentDiv.style.backgroundColor = 'beige';
+                    break;
+
+                case 'torschuetzen':
+                    contentDiv.innerHTML = '<h2>Zurzeit gibt es keine Informationen zu dem Torschützenkönig</h2>';
+                    contentDiv.style.backgroundColor = 'beige';
+                    break;
+
+                case 'spiele':
+                    contentDiv.innerHTML = '<h2>Zurzeit gibt es keine Live-Übertragung</h2>';
+                    contentDiv.style.backgroundColor = 'beige';
+                    break;
+
+                case 'informationen':
+                    contentDiv.innerHTML = '<h2>Ersteller: Arda Yildiz</h2>';
+                    contentDiv.style.backgroundColor = 'beige';
+                    break;
+            }
+
+            
+        }
+    </script>
 </body>
 </html>
