@@ -56,5 +56,7 @@ td.logo {
 }
 
 body.bundesliga {
-    background: url('thumb-1920-916316.jpg') center/cover no-repeat fixed;
+    background: url('FussballBild.png') center/cover no-repeat fixed;
     opacity: 1;
+}
+
