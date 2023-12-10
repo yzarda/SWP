@@ -7,6 +7,8 @@
     <title>Fußball Website</title>
 </head>
 <body>
+
+    <script src="script.js"></script>
     <header>
         <h1>Arda's Fussball Website</h1>
     </header>
@@ -23,6 +25,8 @@
         Hallo Hallo Hallo
     </div>
 
+    <button id="load" onclick="changeContent('bundesliga')">Load</button>
+
     <script>
         function changeContent(page) {
             const contentDiv = document.getElementById('content');
@@ -33,8 +37,12 @@
                     break;
 
                 case 'bundesliga':
-                    contentDiv.innerHTML = '<h2>Bundesliga Tabelle</h2><table border="1"><tr><td>Platz</td><td>Verein</td><td>Punkte</td></tr><tr><td>1</td><td>FC Bayern München</td><td>30</td></tr><tr><td>2</td><td>Borussia Dortmund</td><td>25</td></tr><tr><td>3</td><td>RB Leipzig</td><td>22</td></tr></table>';
-                    contentDiv.style.backgroundColor = 'beige';
+                    fetch("https://api.openligadb.de/getmatchdata/bl1/2020/1")
+                        .then(response => response.json())
+                        .then(data => {
+                            getHTMLForBundesligaTable(data);
+                        })
+                        .catch(error => console.error('Fehler bei der Fetch-Anfrage:', error));
                     break;
 
                 case 'torschuetzen':
@@ -52,8 +60,10 @@
                     contentDiv.style.backgroundColor = 'beige';
                     break;
             }
+        }
 
-            
+        function getHTMLForBundesligaTable(data) {
+            // ... (der vorherige JavaScript-Code)
         }
     </script>
 </body>
