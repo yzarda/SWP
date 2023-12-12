@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+
+}
+
+.Header {
+    background-color: black;
+    width: 1wv;
+    height: 150px;
+    position: relative;
+}
+
+.ImgOfHeader {
+    position: absolute;
+    z-index: 1;
+    max-height: 150px;
+    max-width: 200px;
+}
+
+.OptionMenue {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 100px;
+    margin-left: 5%;
+    color: white;
+}
+
+.OptionMenue :hover {
+    cursor: pointer;
+    color: red;
+    opacity: 1;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.Autor {
+    pointer-events: none;
+}
+
+.Date {
+    pointer-events: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/*Desginänderung noch in Betracht ziehen*/
+
+.table-container {
+    display: grid;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr repeat(7, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.table-header {
+    font-weight: bold;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.team-name {
+    margin-left: 10px;
+}
+
+.team-match {
+    /*etwailige Änderung in Betracht ziehen*/
+}
+
+.Teams-table-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.team-row {
+    width: 500px;
+    margin: 25px;
+    display: grid;
+    grid-template-rows: auto auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    /*background-color: red;*/
+
+}
+
+.team-row:hover {
+    transform: scale(1.05);
+}
+
+.team-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.team-icon img {
+    max-width: 300px;
+    max-height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.team {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.Matches-table-container {
+    display: grid;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.matches-header {
+    font-weight: bold;
+}
+
+.matches-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 0.5fr) 1fr repeat(1, 0.5fr) 1fr repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.matches-info {
+    display: flex;
+    align-items: center;
+}
+
+.resultsOfMatches{
+    display: flex;
+    align-items: center;
+}
+
+.results-header {
+    font-weight: bold;
+}
+
+.results-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 0.5fr) 1fr repeat(1, 0.5fr) 1fr repeat(1, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.results-info {
+    display: flex;
+    align-items: center;
+}
+
+.results-name {
+    margin-left: 10px;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    /*justify-content:  space-evenly;*/
+}
+
+.UpcomingGames-header {
+    font-weight: bold;
+}
+
+.UpcomingGames-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 0.5fr) 1fr repeat(1, 0.5fr) 1fr repeat(1, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.UpcomingGames-info {
+    display: flex;
+    align-items: center;
+}
+
+.UpcomingGames-name {
+    margin-left: 10px;
+}
