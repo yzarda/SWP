@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('Bild2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.App-header {
+  background-color: rgba(40, 44, 52, 0.8);
+  padding: 20px;
+  color: white;
+  border-radius: 15px;
+}
+
+.festive-title {
+  font-size: 36px;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.countdown div {
+  margin: 0 20px;
+}
+
+.countdown h2 {
+  font-size: 24px;
+  color: #f9c804;
+  font-family: 'Pacifico', cursive;
+}
+
+.countdown-timer {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e23e57;
+  font-family: 'Fredoka One', cursive;
+}

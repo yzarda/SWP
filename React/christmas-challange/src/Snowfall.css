@@ -1,0 +1,27 @@
+.snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .snowflake {
+    position: absolute;
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: falling linear infinite;
+    animation-duration: 10s;
+    animation-delay: calc(-10s * var(--index));
+  }
+  
+  @keyframes falling {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
