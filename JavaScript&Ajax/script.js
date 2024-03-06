@@ -4,11 +4,16 @@ document.getElementById("load").addEventListener("click", function(){
         result.json().then((data)=>{
             getHTMLForToDos(data);
             console.log(data);
+            console.log(DataTransfer);
+            console.log(this.DOCUMENT_FRAGMENT_NODE);
+            console.log(this.dispatchEvent);
+            console.log(this.scroll);
         })
     })
 })
 
 let html = "<ul>";
+
 
 function getHTMLForToDos(data){
     let random = (Math.random()*199)+1;
@@ -18,6 +23,8 @@ function getHTMLForToDos(data){
     /*data.forEach(todo => {
         html += "<li>" + todo.title + "</li>"
     });*/
+    
+
 
     data.forEach(todo => {
         if(random == todo.id){
