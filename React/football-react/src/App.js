@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Fixture from "./components/fixture";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import Footer from "./components/footer";
 
 
 function App() {
@@ -55,8 +56,10 @@ function App() {
           </Routes>
         </BrowserRouter>
       )}
+
+   <Footer/>
     </div>
-  );
+  ); 
 }
 
 export default App;
