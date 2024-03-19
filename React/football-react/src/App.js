@@ -1,34 +1,60 @@
-import React, { useEffect } from "react";
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
 import NavBar from "./components/navbar";
-//import { fetchFixtures } from "./lib/fetch-data";
-import {data} from"./lib/dummy-data";
+import { fetchFixtures } from "./lib/fetch-data";
+import { data } from "./lib/dummy-data";
 import Table from "./components/table";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Fixture from "./components/fixture";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+
 
 function App() {
+  const [fixtures, setFixtures] = useState(data);
 
-//const fetchData = async () => {
+  // Uncomment this part if you want it to  fetch data from RAPIDAPI
+  // const fetchInfo = async () => {
+  //   const data = await fetchFixtures();
+  //   setFixtures(data);
+  // };
 
-//const fixtures = await fetchFixtures();
-//  console.log(fixtures)
-//}
+  // useEffect(() => {
+  //   fetchInfo();
+  // }, []);
 
+  console.log(fixtures);
 
-//useEffect(() => {
-
-//fetchData();
-//})
-
-console.log(data);
+  const refresh = () => window.location.reload(true);
 
   return (
-  <div className=""> 
+    <div className="w-full md:w-[700px]  lg:w-[800px] m-auto">
       <NavBar />
-      
 
-      <Table data={data} />
-
+      <button
+        onClick={refresh}
+        className="btn btn-sm fixed bottom-3 right-2 z-40"
+      >
       
+      </button>
+
+      {fixtures.length == 0 ? (
+        <div className="h-screen bg-white w-full text-center p-10">
+          <Box>
+            <CircularProgress />
+          </Box>
+        </div>
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Table data={fixtures} />}></Route>
+            <Route
+              path="/fixture/:matchID"
+              element={<Fixture data={fixtures} />}
+            ></Route>
+          </Routes>
+        </BrowserRouter>
+      )}
     </div>
   );
 }
