@@ -1,27 +1,36 @@
 import React, { useEffect } from "react";
 import './App.css';
 import NavBar from "./components/navbar";
-import { fetchFixtures } from "./lib/fetch-data";
-
+//import { fetchFixtures } from "./lib/fetch-data";
+import {data} from"./lib/dummy-data";
+import Table from "./components/table";
 
 function App() {
 
-const fetchData = async () => {
+//const fetchData = async () => {
 
-  const fixtures = await fetchFixtures();
-  console.log(fixtures)
-}
+//const fixtures = await fetchFixtures();
+//  console.log(fixtures)
+//}
 
 
-useEffect(() => {
+//useEffect(() => {
 
-fetchData();
-})
+//fetchData();
+//})
 
-  return <div className=""> 
+console.log(data);
+
+  return (
+  <div className=""> 
       <NavBar />
-    </div>
+      
 
+      <Table data={data} />
+
+      
+    </div>
+  );
 }
 
 export default App;
