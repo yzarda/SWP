@@ -14,15 +14,7 @@ import Footer from "./components/footer";
 function App() {
   const [fixtures, setFixtures] = useState(data);
 
-  // Uncomment this part if you want it to  fetch data from RAPIDAPI
-  // const fetchInfo = async () => {
-  //   const data = await fetchFixtures();
-  //   setFixtures(data);
-  // };
-
-  // useEffect(() => {
-  //   fetchInfo();
-  // }, []);
+  
 
   console.log(fixtures);
 
