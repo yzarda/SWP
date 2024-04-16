@@ -18,7 +18,7 @@ export default function Footer() {
     </div>
   </nav> 
   <aside>
-    <p>Copyright © 2024 - All right reserved by LiveScores Ltd</p>
+    <p>Copyright Fussball Website Live © 2024 - Alle Rechte vorbehalten </p>
   </aside>
 </footer>
     </>

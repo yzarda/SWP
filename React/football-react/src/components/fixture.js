@@ -5,7 +5,7 @@ import { fetchFixtures } from "../lib/fetch-data";
 import { data } from "../lib/dummy-data";
 
 export default function Fixture() {
- // const [fixture, setFixture] = useState([]);
+
 
   const params = useParams();
   const matchID = params.matchID;
@@ -17,22 +17,6 @@ export default function Fixture() {
 
   const fixture = results[0];
 
-  // const fetchInfo = async () => {
-  //   const data = await fetchFixtures();
-
-  //   const results = data.response.filter((match) => {
-  //     console.log(match);
-  //     return match.fixture.id == matchID;
-  //   });
-
-  //   setFixture(results[0]);
-  // };
-
-  // useEffect(() => {
-  //   fetchInfo();
-  // }, []);
-
-  // if (!fixture) return <>loading</>;
 
   return (
     <div className="pb-10 bg-white">
@@ -136,9 +120,7 @@ export default function Fixture() {
         <div className="p-2">{fixture.league.season}</div>
       </div>
 
-      <div className="text-center">
-        <button className="btn btn-wide">Pay for Live Odds</button>
-      </div>
+      
     </div>
   );
 }

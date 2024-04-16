@@ -37,24 +37,16 @@ export default function NavBar() {
           </ul>
         </div>
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          LiveScores
+          Live Fussball Website
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Fixtures</a>
-          </li>
-          <li tabIndex={0}>
-            <a>Results</a>
-          </li>
-          <li>
-            <a>Odds</a>
-          </li>
+         
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">LOGIN</a>
+        
       </div>
     </div>
   );
