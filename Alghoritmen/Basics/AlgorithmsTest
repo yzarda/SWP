@@ -1,0 +1,24 @@
+package at.riedmann.algorithms.basicAlgorithms;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class BaseAlgorithmsTest {
+    private int[] data = { 1, 2, 3 };
+
+    @Test
+    void testRevert() {
+        int[] expectedData = { 3, 2, 1 };
+        Assertions.assertArrayEquals(expectedData, BaseAlgorithms.revert(data));
+    }
+
+    @Test
+    void testMax() {
+        Assertions.assertEquals(BaseAlgorithms.max(data), 3);
+    }
+
+    @Test
+    void testMin() {
+        Assertions.assertEquals(BaseAlgorithms.min(data), 1);
+    }
+}
