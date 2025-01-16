@@ -1,4 +1,4 @@
-package at.riedmann.algorithms.basicAlgorithms;
+package at.yil.algorithms.basicAlgorithms;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

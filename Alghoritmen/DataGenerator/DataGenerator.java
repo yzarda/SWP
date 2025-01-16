@@ -1,4 +1,4 @@
-package at.riedmann.algorithms.dataGenerator;
+package at.yil.algorithms.dataGenerator;
 
 import java.util.Random;
 

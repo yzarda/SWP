@@ -1,4 +1,4 @@
-package at.riedmann.algorithms.dataGenerator;
+package at.yil.algorithms.dataGenerator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
