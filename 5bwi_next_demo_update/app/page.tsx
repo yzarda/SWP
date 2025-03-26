@@ -3,7 +3,10 @@ import Menu from "./components/menu";
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <h1>Cars</h1>
+
+    </div>
   );
 }
 
